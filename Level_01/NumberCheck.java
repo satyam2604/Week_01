@@ -5,7 +5,7 @@ class NumberCheck{
 		// Creating Scanner object
         Scanner sc = new Scanner(System.in);
 		
-		// Get integer input for number of students
+		// Get integer input for number
 		System.out.print("Enter the number: ");
         int n = sc.nextInt();
 
@@ -15,10 +15,10 @@ class NumberCheck{
 	
 	public static int numberCheck(int n){
 		if(n>0){
-			return 1;
+			return 1; // return 1 if number is positive
 		}else if(n<0){
-			return -1;
+			return -1; // return -1 if number is negative
 		}
-		return 0;
+		return 0; // return 0 if number is 0
 	}
 }
