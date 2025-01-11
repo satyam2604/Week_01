@@ -58,4 +58,9 @@ class TeamBMI2DArray {
         System.out.printf("%-10s %-10s %-10s %-15s\n", "Height(m)", "Weight(kg)", "BMI", "Weight Status");
         for (int i = 0; i < number; i++) {
             System.out.printf("%-10.2f %-10.2f %-10.2f %-15s\n",
-                    personData[i][0], personData[i][1], personData[i][2], w
+                    personData[i][0], personData[i][1], personData[i][2], weightStatus[i]);
+        }
+
+        sc.close(); // Close the scanner
+    }
+}
