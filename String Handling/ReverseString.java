@@ -10,7 +10,7 @@ class ReverseString{
 		String word = sc.next();
 		
 		//call a method to display reversed String
-		System.out.println(" The String is: " + word + " and reversed is: " + isReversed(word)); 
+		System.out.println("The String is: " + word + " and reversed is: " + isReversed(word)); 
 	}
 	
 	// method to reverse a String
