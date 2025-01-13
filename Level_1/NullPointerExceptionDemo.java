@@ -12,6 +12,13 @@ class NullPointerExceptionDemo {
         System.out.println("\nHandling NullPointerException:");
         handleException(); // This will handle the exception gracefully
     }
+	
+    // Method to generate NullPointerException
+    public static void generateException() {
+        String text = null; // Initializing the variable to null
+        // Attempting to call a String method on a null object
+        System.out.println(text.length()); // This will throw NullPointerException
+    }
 
     // Method to handle NullPointerException
     public static void handleException() {
@@ -23,12 +30,5 @@ class NullPointerExceptionDemo {
             // Handling the exception
             System.out.println("Caught NullPointerException: The string is null!");
         }
-    }
-
-    // Method to generate NullPointerException
-    public static void generateException() {
-        String text = null; // Initializing the variable to null
-        // Attempting to call a String method on a null object
-        System.out.println(text.length()); // This will throw NullPointerException
     }
 }
