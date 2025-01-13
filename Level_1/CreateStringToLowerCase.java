@@ -25,7 +25,7 @@ class CreateStringToLowerCase {
 		}
     }
 
-    // Method to manually make sentence to Upper Case
+    // Method to manually make sentence to Lower Case
     public static String makeLowerCase(String sentence) {
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i<sentence.length(); i++){
