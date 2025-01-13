@@ -5,7 +5,7 @@ class NullPointerExceptionDemo {
         try {
             generateException(); // This will cause a NullPointerException
         } catch (NullPointerException e) {
-            System.out.println("Exception caught in main: " + e.getMessage());
+            System.out.println("Exception caught in main: " + e.getMessage());// This will display the reason that why the exception occurs
         }
 
         // Handle the exception
