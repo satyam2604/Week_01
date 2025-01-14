@@ -13,20 +13,16 @@ class WordAndLengthIn2DArray {
 		int textLength = findLength(sentence);
 		
 		// call a method to split words of sentence by making a user defined method
-		String [] splitWord1 = splitSentence(sentence);
-		String [] splitWord2 = sentence.split("\\s");
+		String [] splitWord = splitSentence(sentence);
 		
-		// print the sentence after splitting using user defined method
-		for(String str: splitWord1){
-		System.out.println(str);			
-		}
+		// call a mthod which will return a 2D array with word and its length
+		String [] [] wordWithLengths = findWordAndLength(splitWord);
 		
-		// print if output of built in method and manual method is same
-		if(isEquals(splitWord1,splitWord2)){
-			System.out.println("Both method are similar.");
-		}else{
-			System.out.println("Both method are not similar.");
-		}
+		// Print word along with their length
+		System.out.println("Words and their lengths:");
+        for (String[] row : wordWithLengths) {
+            System.out.println("Word: " + row[0] + ", Length: " + row[1]);
+        }
     }
 	
 	// Method to split text into words using charAt() method
@@ -56,8 +52,8 @@ class WordAndLengthIn2DArray {
     }
 
     // Method to find length of the word
-    public static int findLength(String word) {
-		char [] charArray = word.toCharArray(); // converts string to a character array
+    public static int findLength(String text) {
+		char [] charArray = text.toCharArray(); // converts string to a character array
 			int length = 0; // an variable which will store length of any text entered
 		try{
 			for(char ch : charArray){
@@ -68,17 +64,17 @@ class WordAndLengthIn2DArray {
 		}
 		return length;
     }
+	
+	// Method to return a 2D array of words along with their length
+	public static String [][] findWordAndLength(String [] splitWord){
+		String[][] result = new String[splitWord.length][2];
 
-    // Method to compare if output of built in method and manual method is same
-    public static boolean isEquals(String [] splitWord1, String [] splitWord2) {
-        if(splitWord1.length != splitWord2.length){
-			return false;
-		}
-		for(int i=0; i<splitWord1.length; i++){
-			if(!splitWord1.equals(splitWord2)){
-				return false;
-			}
-		}
-		return true;
-    }
+        for (int i = 0; i < splitWord.length; i++) {
+            result[i][0] = splitWord[i];
+            result[i][1] = String.valueOf(findLength(splitWord[i])); // Convert length to String
+        }
+
+        return result;
+
+	}
 }
