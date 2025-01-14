@@ -1,6 +1,6 @@
 import java.util.*;
 
-class SplitSentence {
+class WordAndLengthIn2DArray {
     public static void main(String[] args) {
         // Create Scanner object to get user input
         Scanner sc = new Scanner(System.in);
