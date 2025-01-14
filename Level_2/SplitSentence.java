@@ -1,13 +1,13 @@
 import java.util.*;
 
-class FindLength {
+class SplitSentence {
     public static void main(String[] args) {
         // Create Scanner object to get user input
         Scanner sc = new Scanner(System.in);
 
-        // Take a word as input from the user
-        System.out.print("Enter a word: ");
-        String word = sc.next();
+        // Take a sentence as input from the user
+        System.out.print("Enter a sentence: ");
+        String sentence = sc.nextLine();
 		
 		// call a method to find length of word by making a user defined method
 		int textLength1 = findLength(word);
@@ -27,7 +27,7 @@ class FindLength {
     // Method to find length of the word
     public static int findLength(String word) {
 		char [] charArray = word.toCharArray(); // converts string to a character array
-		int length = 0; // an variable which will store length of any text entered
+			int length = 0; // an variable which will store length of any text entered
 		try{
 			for(char ch : charArray){
 			++length;	
